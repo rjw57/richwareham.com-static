@@ -12,20 +12,20 @@
     <core-ajax auto url="/@" handleAs="json" response="{{ links }}">
     </core-ajax>
 
-    <template if="{{ links === null }}">
+    <template if="{{ links === null || !links.redirects}}">
       <div horizontal layout center-justified style="padding: 32px 0">
         <loading-throbber></loading-throbber>
       </div>
     </template>
 
-    <template if="{{ links !== null }}">
+    <template if="{{ links !== null && links.redirects }}">
       <table class="table">
         <thead>
           <th>Shortcut</th><th>Destination</th>
           <th incidental>Modified</th><th incidental>Created</th>
         </thead>
         <tbody>
-          <tr template repeat="{{ l in links }}">
+          <tr template repeat="{{ l in links.redirects }}">
             <td><a href="{{ l.urls.self }}">{{ l.from }}</a></td>
             <td><a href="{{ l.to }}">{{ l.to }}</a></td>
             <td incidental>{{ l.modified | date }}</td>
