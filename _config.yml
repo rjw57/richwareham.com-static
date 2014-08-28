@@ -1,0 +1,36 @@
+# Site settings
+title: "Rich Wareham"
+email: rich@richwareham.com
+description: "Rich Wareham's personal website"
+baseurl: ""
+url: ""
+twitter_username: richwareham
+github_username:  rjw57
+
+# Ignore all the build crap
+exclude: ["node_modules", "*.yaml", "*.json", ".*",
+          "Gruntfile.js", "README.md", "ATTRIBUTION.md",
+          "js/bower_components", "scripts"]
+
+# Explicitly include some files
+include: ["publications.json"]
+
+# Defaults for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      theme: "blue"
+      layout: "post"
+      author: "Rich Wareham"
+
+# Build settings
+markdown: kramdown
+permalink: /articles/:year/:month/:day/:title
+kramdown:
+  use_coderay: false
+  enable_coderay: false
+  input: GFM
+  hard_wrap: false

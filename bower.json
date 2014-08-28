@@ -1,0 +1,25 @@
+{
+  "name": "richwareham.com",
+  "version": "0.0.0",
+  "authors": [
+    "Rich Wareham <rjw57@cam.ac.uk>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.4",
+    "core-elements": "Polymer/core-elements#~0.3.4",
+    "paper-elements": "Polymer/paper-elements#~0.3.4",
+    "highlightjs": "~8.0.0",
+    "highlightjs-element": "PolymerLabs/highlightjs-element#~0.3.4",
+    "google-map": "PolymerLabs/google-map#~0.3.0",
+    "moment": "~2.7.0"
+  }
+}
