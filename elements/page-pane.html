@@ -45,7 +45,7 @@
           <paper-icon-link icon="arrow-back" href="{{ href ? href : '/' }}"></paper-icon-link>
           <div flex>{{ pageTitle }}</div>
           <template if="{{icon}}">
-            <core-icon pageicon icon="{{icon}}" size="32"></core-icon></template>
+            <core-icon pageicon icon="{{icon}}" style="width: 32px; height: 32px"></core-icon></template>
         </core-toolbar>
         <div content>
           <template if="{{ coverSrc }}">
@@ -65,7 +65,7 @@
           <core-toolbar class="medium-tall theme {{ theme ? theme : 'grey' }} bg fg">
             <div class="bottom" flex>{{ pageTitle }}</div>
             <template if="{{icon}}">
-              <core-icon class="bottom" pageicon icon="{{icon}}" size="72">
+              <core-icon class="bottom" pageicon icon="{{icon}}" style="width: 72px; height: 72px">
               </core-icon>
             </template>
           </core-toolbar>

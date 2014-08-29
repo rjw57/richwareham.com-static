@@ -21,10 +21,12 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      .icon { width: 32px; height: 32px; }
+      .featured.icon { width: 96px; height: 96px; }
+      @media (screen and min-midth: 1024px) {
+        .featured.icon { width: 128px; height: 128px; }
+      }
     </style>
-
-    <core-media-query query="min-width: 1024px" queryMatches="{{ wide }}">
-    </core-media-query>
 
     <div relative card flex class="theme {{ theme ? theme : 'grey' }} bg fg"
         _style="{{ coverSrc ? 'background-image: url(' + coverSrc + ')' : '' }}"
@@ -35,7 +37,7 @@
         <div flex vertical layout content>
           <div flex horizontal layout center-justified>
             <div vertical layout center-justified>
-              <core-icon icon="{{ icon }}" size="{{ wide ? 128 : 96 }}"></core-icon>
+              <core-icon class="featured icon" icon="{{ icon }}"></core-icon>
             </div>
           </div>
           <div class="theme text secondary bg fg">
@@ -48,7 +50,7 @@
         <div flex horizontal layout content>
           <template if="{{icon}}">
             <div vertical layout center-justified>
-              <core-icon icon="{{ icon }}" size="32"></core-icon>
+              <core-icon class="icon" icon="{{ icon }}"></core-icon>
             </div>
           </template>
           <div flex vertical layout center-justified>
