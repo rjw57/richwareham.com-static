@@ -8,6 +8,11 @@ module.exports = function(grunt) {
     jekyll: {
       build: {
       },
+      devel: {
+        options: {
+          drafts: true,
+        },
+      },
       serve: {
         options: {
           watch: true,
@@ -45,7 +50,7 @@ module.exports = function(grunt) {
       },
       target1: [
         'vulcanize',
-        'jekyll:build',
+        'jekyll:devel',
         'watch'
       ]
     },
