@@ -10,6 +10,15 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  <script src="/components/platform/platform.js"></script>
+  <script src="{{site.url}}/components/platform/platform.js"></script>
   <link rel="import" href="/elements/elements.vulcanized.html">
+
+  <!-- MathJax support -->
+  <script type="text/x-mathjax-config">
+    // Workaround for https://github.com/Polymer/platform-dev/issues/30
+    MathJax.Hub.Config({
+      elements: document.getElementsByTagName("body")
+    });
+  </script>
+  <script src="{{site.url}}/components/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
