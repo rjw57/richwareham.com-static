@@ -38,21 +38,6 @@ module.exports = function(grunt) {
       }
     },
 
-    appengine: {
-      options: {
-        manageFlags: {
-          oauth2: true
-        },
-        runFlags: {
-          port: 9000,
-          host: "0.0.0.0"
-        }
-      },
-      frontend: {
-        root: '.'
-      }
-    },
-
     concurrent: {
       options: {
         logConcurrentOutput: true,
@@ -60,8 +45,6 @@ module.exports = function(grunt) {
       },
       target1: [
         'vulcanize',
-        'jekyll:serve',
-        'appengine:run:frontend',
         'watch'
       ]
     },
@@ -81,7 +64,7 @@ module.exports = function(grunt) {
     var PUB_URLS = [
         'http://publications.eng.cam.ac.uk/cgi/exportview/creators/Wareham=3ARJ=3A=3A/JSON/Wareham=3ARJ=3A=3A.js',
         'http://publications.eng.cam.ac.uk/cgi/exportview/creators/Wareham=3AR=3A=3A/JSON/Wareham=3AR=3A=3A.js',
-    ]
+    ];
 
     var processUrls = function(urls, cb) {
       var pubs = [];
@@ -122,7 +105,7 @@ module.exports = function(grunt) {
       };
 
       processEntry(0);
-    }
+    };
 
     processUrls(PUB_URLS, function(pubs) {
       fs.writeFile('publications.json', JSON.stringify(pubs), function() {
@@ -141,7 +124,4 @@ module.exports = function(grunt) {
 
   // Task to run vulcanize and build the jekyll site
   grunt.registerTask('build', ['fetchpubs', 'vulcanize', 'jekyll:build']);
-
-  // Task to update the appengine instance
-  grunt.registerTask('push', ['build', 'appengine:update:frontend']);
 };
