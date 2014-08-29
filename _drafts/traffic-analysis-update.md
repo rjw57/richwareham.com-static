@@ -1,19 +1,20 @@
 ---
 layout: post
-title: "Traffic poster"
-coveralt: "A picture of Emma"
+title: "Can we predict England's traffic?"
+coveralt: "An image of out poster"
 cover: images/srf-meeting-poster-sep-2014.jpg
 ---
 
-Our lab has a new member. For next year's Masters projects, we are partnering
-with a local tech consultancy to develop a robotic project. We'll be using the
-[CrustCrawler AX-18A Smart Robotic
-Arm](http://crustcrawler.com/products/AX-18F%20Smart%20Robotic%20Arm/) in the
-project. Ultimately we're going to have four: one per student. Before that,
-though, we need to make sure that we know what bits to get. She took quite a
-while to put together but now Emma lives!
+In September 2014, we presented a poster on some of the ancillary research I am
+doing as part of my latest project supported by the [Centre for Sustainable
+Road Freight](http://sustainableroadfreight.org). A [PDF of the
+poster](downloads/srf-meeting-poster-sep-2014.pdf) is available to download for
+those that are interested.
 
-In case you're wondering, one possible project aim is to peel a banana with a
-scalpel. The arm is, somewhat playfully, named after [Mrs Emma
-Peel](https://en.wikipedia.org/wiki/Emma_Peel) from *[The
-Avengers](https://en.wikipedia.org/wiki/The_Avengers_(TV_series))*.
+# Overview
+
+The poster focusses on a single part of our wider research project on gathering
+traffic flow data. Part A of the project aims to infer traffic flow directly
+from video streams but knowing the current state of the world is only one part
+of the problem; we are also investigating what techniques can be used to
+predict the near future.
