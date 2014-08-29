@@ -10,7 +10,8 @@ github_username:  rjw57
 # Ignore all the build crap
 exclude: ["node_modules", "*.yaml", "*.json", ".*",
           "Gruntfile.js", "README.md", "ATTRIBUTION.md",
-          "js/bower_components", "scripts"]
+          "js/bower_components", "scripts",
+          "Gemfile", "Gemfile.lock"]
 
 # Explicitly include some files
 include: ["publications.json"]
