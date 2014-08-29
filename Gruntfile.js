@@ -45,6 +45,7 @@ module.exports = function(grunt) {
       },
       target1: [
         'vulcanize',
+        'jekyll:build',
         'watch'
       ]
     },
