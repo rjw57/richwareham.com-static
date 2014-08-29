@@ -20,3 +20,15 @@ traffic flow data. Part A of the project aims to infer traffic flow directly
 from video streams but knowing the current state of the world is only one part
 of the problem; we are also investigating what techniques can be used to
 predict the near future.
+
+# Data wrangling
+
+In [a previous post]({% post_url 2013-06-19-realtime-traffic-data %}) I
+outlined some of the basic steps required to get hold of the UK Highways
+Agency's real time data feed and wrangling it in Python. I recommend reading
+that post if you're interested in the details of how the data is fetched and
+parsed.
+
+## What data is available?
+
+...
