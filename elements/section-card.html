@@ -31,7 +31,7 @@
         vertical layout>
       <paper-shadow></paper-shadow>
 
-      <template if="{{featured !== null}}">
+      <template if="{{featured || featured === ''}}">
         <div flex vertical layout content>
           <div flex horizontal layout center-justified>
             <div vertical layout center-justified>
@@ -44,7 +44,7 @@
         </div>
       </template>
 
-      <template if="{{featured === null}}">
+      <template if="{{!featured && featured !== ''}}">
         <div flex horizontal layout content>
           <template if="{{icon}}">
             <div vertical layout center-justified>
