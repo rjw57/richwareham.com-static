@@ -7,3 +7,16 @@ body {
 }
 
 google-map { display: block; height: 320px; }
+
+/* Fallback for none-polymer browsers */
+body #no-polymer { display: none; }
+body[unresolved] #no-polymer { display: block; }
+#no-polymer {
+  padding: 1ex;
+  color: white;
+  background: darkred;
+}
+#no-polymer a, #no-polymer a:visited, #no-polymer a:hover {
+  color: white;
+  text-decoration: underline;
+}

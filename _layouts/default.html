@@ -3,6 +3,7 @@
   {% include head.html %}
   <body fullbleed unresolved layout vertical
   class="theme light {% if page.theme %}{{ page.theme }}{% else %}grey{% endif %} fg bg">
+    <div id="no-polymer">{% include nopolymer.html %}</div>
     <core-style ref="rw-theme"></core-style>
     {{content}}
   </body>
