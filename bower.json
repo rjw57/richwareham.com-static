@@ -20,7 +20,6 @@
     "highlightjs": "~8.0.0",
     "highlightjs-element": "PolymerLabs/highlightjs-element#~0.4.0",
     "google-map": "PolymerLabs/google-map#~0.3.0",
-    "moment": "~2.7.0",
-    "MathJax": "~2.4.0"
+    "moment": "~2.7.0"
   }
 }
