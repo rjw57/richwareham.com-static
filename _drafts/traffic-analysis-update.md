@@ -9,7 +9,9 @@ In September 2014, we presented a poster on some of the ancillary research I am
 doing as part of my latest project supported by the [Centre for Sustainable
 Road Freight](http://sustainableroadfreight.org). A [PDF of the
 poster](downloads/srf-meeting-poster-sep-2014.pdf) is available to download for
-those that are interested.
+those that are interested. The [source for the
+poster](https://git.csx.cam.ac.uk/x/eng-sigproc/u/rjw57/srf/docs/poster-sep-2014.git)
+is hosted on the University git service.
 
 # Overview
 
