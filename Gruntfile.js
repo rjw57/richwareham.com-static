@@ -35,12 +35,12 @@ module.exports = function(grunt) {
 
     watch: {
       elements: {
-        files: ['elements/**/*.html'],
-        tasks: ['vulcanize'],
+        files: ['elements/**/*.html', '**/*.md'],
+        tasks: ['vulcanize', 'jekyll:devel'],
         options: {
           spawn: false,
         }
-      }
+      },
     },
 
     concurrent: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       target1: [
         'vulcanize',
         'jekyll:devel',
-        'watch'
+        'watch',
       ]
     },
 
