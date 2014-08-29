@@ -6,5 +6,5 @@ theme: cyan
 icon: rw:teaching
 ---
 
-SDklsmkfds
+This page will have resources for my various teaching-related activities.
 
