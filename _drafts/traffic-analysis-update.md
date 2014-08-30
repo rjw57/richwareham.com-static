@@ -31,4 +31,45 @@ parsed.
 
 ## What data is available?
 
-...
+The UK Highways Agency publish an XML document four times an hour which gives
+the latest measurements for stretches of roads (or *links*) in England. A link
+has a direction; each carriageway of a road will appear as a separate link but
+a link may have multiple lanes. This information includes the current traffic
+flow (vehicles/hour), mean speed (km/hour) and occupancy (%). An occupancy of
+100% means that the road is fully occupied, nose-to-tail, on each lane.
+
+## How do you get it?
+
+The XML document itself is available via a public URL which may simply be
+fetched. We have developed an automated system based in the Cloud which fetches
+this document every 15 minutes, parses the XML and strips the information we
+currently do not use. The XML stream itself is 120MB an hour and so this "data
+reduction" step is important. We have a full archive of the XML stream for
+around six months which is nearly 150GB in size even when compressed.
+
+## How do you store it?
+
+Our system in the cloud does two things. Firstly it provides an archive of the
+day's traffic flows, occupancies and speeds which is downloaded and integrated
+into a local SQLite database on our site. This database is the source for the
+time-series data for individual links. The cloud based system also translate
+the current state of England's traffic into a JSON-formatted document which can
+easily be consumed by our web-based visualisation tool (XML, despite its
+web-heritage, is rather inconvenient as a file format for today's web.) On a
+more technical note, our cloud service also supports CORS (Cross-Origin
+Resource Sharing) which is again a technical requirement for making use of the
+data in our visualisation platform.
+
+# Analysis
+
+... Use [NMF].
+
+# Prediction
+
+# Summary
+
+# References
+
+* [nmf]
+
+[nmf]: http://example.com/ "Non-negative matrix factorisation."
