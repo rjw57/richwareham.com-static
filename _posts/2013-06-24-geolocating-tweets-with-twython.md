@@ -10,7 +10,7 @@ dubious preference metric.*
 
 Twitter recently [retired their "version 1" API] [v1-retirement]. It seems a good point, therefore, to learn both how to
 interact with their new "version 1.1" API and to see what sort of data Twitter lets you get on individual tweets. As
-usual for most of my little 'learn how to do \\(x\\)' projects, I'm going to reach for [IPython]. The code in this post is
+usual for most of my little 'learn how to do \$$x$$' projects, I'm going to reach for [IPython]. The code in this post is
 available in an [IPython notebook] [notebook] ([GitHub gist] [notebook-gist]).
 
 [v1-retirement]: https://dev.twitter.com/blog/api-v1-is-retired
