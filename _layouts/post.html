@@ -4,6 +4,13 @@ layout: default
 <page-pane flex theme="{{ page.theme }}" pageTitle="{{ page.title }}" icon="{{ page.icon }}"
 coverSrc="{% if page.cover %}{{ site.url }}/{{ page.cover }}{% endif %}" coverAlt="{{ page.coveralt }}">
   <article>
+    <section id="edit-on-github">
+      Notice any errors or omissions in this post? Feel free to
+      <a href="{{ site.github_root }}/{{ page.path }}">
+        edit it on GitHub
+      </a>
+      and send me a pull request.
+    </section>
     {{ content }}
   </article>
 </page-pane>

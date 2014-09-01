@@ -6,6 +6,7 @@ baseurl: ""
 url: ""
 twitter_username: richwareham
 github_username:  rjw57
+github_root: "https://github.com/rjw57/richwareham.com/tree/master/personalsite/static"
 
 # Ignore all the build crap
 exclude: ["node_modules", "*.yaml", "*.json", ".*",
