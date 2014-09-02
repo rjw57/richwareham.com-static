@@ -6,6 +6,11 @@ if [ -z "$STATIC_SITE_SECRET" ]; then
   exit 1
 fi
 
+if [ ! -d "_site" ]; then
+  echo "Static site output directory not present" >&2
+  exit 1
+fi
+
 echo "Archiving site"
 pushd _site
 tar cvjf ../static.tar.bz2 .
