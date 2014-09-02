@@ -105,9 +105,10 @@ something like cURL:
 $ curl -i -F "archive=@site.zip" https://www.richwareham.com/static-content
 ```
 
-This works beautifully now **anyone can modify my site's content**. To
-overwrite or create a file on my site an attacker need only POST a zipfile to a
-URL which is plainly listed in the Tavis configuration file.
+This works beautifully but it is massively insecure: **anyone can modify my
+site's content**. To overwrite or create a file on my site an attacker need
+only POST a zipfile to a URL which is plainly listed in the Tavis configuration
+file.
 
 # Shhh... It's a (shared) secret
 
