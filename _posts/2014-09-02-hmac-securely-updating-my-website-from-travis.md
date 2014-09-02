@@ -10,7 +10,7 @@ cover: images/fingerprint.jpg
 This website has dynamic content like my [link
 shortener](https://www.richwareham.com/links) and static content like this blog
 post. I have Travis CI set up to build my website's static content whenever a
-new commit is made to the GitHub repository. My website has a very simple
+new commit is made to the github repository. My website has a very simple
 method of updating itself: HTTP POST-ing a zip file to a magic URL will unzip
 that file over the static file directory. This post is how I try to secure that
 mechanism while preserving the simplicity of a "deploy via cURL" model.
@@ -58,13 +58,13 @@ over my website(!)
 # Simple is better
 
 I wanted a very simple way to deploy a new bundle of static content. Initially
-I thought GitHub releases would be the way forward. My plan was to make Travis
+I thought github releases would be the way forward. My plan was to make Travis
 create a new release associated with the static content repo on each
 successfully built commit to master. Unfortunately github is geared up to make
 releases only when there's an associated tag. Having to tag each and every
 commit seemed ugly and, as usual when things seem ugly, it's worth taking a
 step back and thinking about the problem. A build of the static content isn't
-really a "release" in the Github sense; once it's deployed I don't need to keep
+really a "release" in the github sense; once it's deployed I don't need to keep
 it around forever more.
 
 After a bit more thought, I decided to make the deployment process a kind of
