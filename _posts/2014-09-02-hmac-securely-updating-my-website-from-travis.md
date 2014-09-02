@@ -191,7 +191,7 @@ $ SECRET=`dd if=/dev/urandom count=1024 | sha1sum`
 $ cd $OPENSHIFT_APP   # cd to checkout of OpenShift app repo
 $ rhc set-env STATIC_SITE_SECRET=$SECRET
 $ cd $STATIC_SITE     # cd to checkout of static site repo
-$ travis encrypt --save STATIC_SITE_SECRET=$SECRET
+$ travis encrypt --add STATIC_SITE_SECRET=$SECRET
 ```
 
 Note that this can be automated via a cron job and so the shared secret need
