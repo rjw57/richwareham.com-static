@@ -219,6 +219,6 @@ it can get, there may still be ways for a sufficiently motivated attacker to
 push content to my website. I'm defending against the trivial "LOL his website
 accepts any zip thrown at it"-style attacker, not someone willing to put real
 effort into defacing my website :). That being said, if you *do* find some
-obvious way to subvert this methid, I'd be interested to hear it. I'm always
+obvious way to subvert this method, I'd be interested to hear it. I'm always
 willing to learn more about crypto because if anyone claims they know it all,
 they're lying or mad.
