@@ -4,4 +4,4 @@ _site
 *.vulcanized.html
 *.pyc
 publications.json
-static.tar.bz2
+static.zip

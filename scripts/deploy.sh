@@ -18,13 +18,13 @@ echo "Will deploy to $DEPLOY_URL"
 
 echo "Archiving site"
 pushd _site
-tar cvjf ../static.tar.bz2 .
+zip -r ../static.zip .
 popd
 
 echo "Calculating HMAC"
-HMAC=`scripts/calc_hmac.py static.tar.bz2`
+HMAC=`scripts/calc_hmac.py static.zip`
 echo "HMAC computed as $HMAC"
 
 echo "Pushing payload to $DEPLOY_URL"
-curl -i -F "hmac=$HMAC" -F "archive=@static.tar.bz2" "$DEPLOY_URL"
+curl -i -F "hmac=$HMAC" -F "archive=@static.zip" "$DEPLOY_URL"
 
