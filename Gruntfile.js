@@ -51,8 +51,20 @@ module.exports = function(grunt) {
       target1: [
         'vulcanize',
         'jekyll:devel',
+        'copy:components',
         'watch',
       ]
+    },
+
+    copy: {
+      components: {
+        files: [
+          {
+            expand: true, src: [ 'js/bower_components/platform/**' ],
+            dest: '_site/components/platform/',
+          },
+        ],
+      },
     },
 
   });
@@ -129,5 +141,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['concurrent']);
 
   // Task to run vulcanize and build the jekyll site
-  grunt.registerTask('build', ['fetchpubs', 'vulcanize', 'jekyll:build']);
+  grunt.registerTask('build', ['fetchpubs', 'vulcanize', 'jekyll:build', 'copy:components']);
 };
