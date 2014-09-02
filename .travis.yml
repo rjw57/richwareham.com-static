@@ -1,0 +1,16 @@
+language: ruby
+install:
+  - bundle install
+script:
+  - npm install
+  - node_modules/.bin/bower install
+  - node_modules/.bin/grunt build
+  - cd _site && tar cvjf ../static.tar.bz2 .
+deploy:
+  provider: releases
+  api_key:
+    secure: EHdy2DUCJZTbj1Sj+OdDbCYjoGzMv+1u3RMve0/S65HKw+7O+CWHpQykbZW91xJxiBX2JT3MlimObLdy+j2ZV9bS4ZaFYC1Dyx1unHlgzo4Qzbu53kPOFCqMkc40srfZwa+IdYhTDQZOqLPWI0wzFnI5ozOoR3W6u6CFV9HXgjo=
+  file: static.tar.bz2
+  on:
+    repo: rjw57/richwareham.com-static
+    branch: master
