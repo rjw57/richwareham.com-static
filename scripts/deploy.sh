@@ -11,6 +11,11 @@ if [ ! -d "_site" ]; then
   exit 1
 fi
 
+if [ -z "$DEPLOY_URL" ]; then
+  DEPLOY_URL="https://www.richwareham.com/static-content"
+fi
+echo "Will deploy to $DEPLOY_URL"
+
 echo "Archiving site"
 pushd _site
 tar cvjf ../static.tar.bz2 .
@@ -20,6 +25,6 @@ echo "Calculating HMAC"
 HMAC=`scripts/calc_hmac.py static.tar.bz2`
 echo "HMAC computed as $HMAC"
 
-echo "Pushing payload"
-curl -i -F "hmac=$HMAC" -F "archive=@static.tar.bz2" https://www.richwareham.com/static-content
+echo "Pushing payload to $DEPLOY_URL"
+curl -i -F "hmac=$HMAC" -F "archive=@static.tar.bz2" "$DEPLOY_URL"
 
