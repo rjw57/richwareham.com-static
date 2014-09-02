@@ -1,0 +1,9 @@
+language: ruby
+
+install:
+  - bundle install
+
+script:
+  - npm install
+  - node_modules/.bin/bower install
+
