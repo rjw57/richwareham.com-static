@@ -1,10 +1,13 @@
 language: ruby
 install:
-  - bundle install
+- bundle install
 script:
-  - npm install
-  - node_modules/.bin/bower install
-  - node_modules/.bin/grunt build
+- npm install
+- node_modules/.bin/bower install
+- node_modules/.bin/grunt build
 after_success:
-  # Only run deployment from master branch of correct repo
-  - if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_REPO_SLUG" == "rjw57/richwareham.com-static" ]; then ./deploy.sh; fi
+- if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_REPO_SLUG" == "rjw57/richwareham.com-static"
+  ]; then ./deploy.sh; fi
+env:
+  global:
+    secure: jIeXrnv3VhIpPXOni787CITduAB28v5X1wtaPMtY/CN930Kp4NLII/I74RAurAyEybMtQH2bCLnO839UV3Ql5CvqcYUhhWcbg22WvETpdndeNQTpPhAW7YAAIk4W34/ynC5qBUE2lj+95Y/eGzM4v3J+ydToBEhxgww/kIJCuiM=
