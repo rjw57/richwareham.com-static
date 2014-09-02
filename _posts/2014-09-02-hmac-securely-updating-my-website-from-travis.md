@@ -7,12 +7,13 @@ cover: images/fingerprint.jpg
 
 # Overview
 
-I have Travis CI set up to build my website's static content like blog posts
-whenever a new commit is made to the GitHub repository. My website has a very
-simple method of updating itself: HTTP POST-ing a zip file to a magic URL will
-unzip that file over the static file directory. This post is how I try to
-secure that mechanism while preserving the simplicity of a "deploy via cURL"
-model.
+This website has dynamic content like my [link
+shortener](https://www.richwareham.com/links) and static content like this blog
+post. I have Travis CI set up to build my website's static content whenever a
+new commit is made to the GitHub repository. My website has a very simple
+method of updating itself: HTTP POST-ing a zip file to a magic URL will unzip
+that file over the static file directory. This post is how I try to secure that
+mechanism while preserving the simplicity of a "deploy via cURL" model.
 
 # The problem
 
