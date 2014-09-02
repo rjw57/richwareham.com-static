@@ -15,5 +15,6 @@ echo "Calculating HMAC"
 HMAC=`scripts/calc_hmac.py static.tar.bz2`
 echo "HMAC computed as $HMAC"
 
-echo "TODO: deploy"
-which curl
+echo "Pushing payload"
+curl -i -F "hmac=$HMAC" -F "archive=@static.tar.bz2" https://www.richwareham.com/static-content
+
