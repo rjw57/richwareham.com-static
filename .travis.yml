@@ -5,4 +5,6 @@ script:
   - npm install
   - node_modules/.bin/bower install
   - node_modules/.bin/grunt build
-  - cd _site && tar cvjf ../static.tar.bz2 .
+after_success:
+  # Only run deployment from master branch of correct repo
+  - if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_REPO_SLUG" == "rjw57/richwareham.com-static" ]; then ./deploy.sh; fi
