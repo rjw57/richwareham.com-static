@@ -62,6 +62,7 @@ module.exports = function(grunt) {
           {
             expand: true, src: [ 'js/bower_components/platform/**' ],
             dest: '_site/components/platform/',
+            flatten: true,
           },
         ],
       },
