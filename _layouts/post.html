@@ -5,7 +5,7 @@ layout: default
 coverSrc="{% if page.cover %}{{ site.url }}/{{ page.cover }}{% endif %}" coverAlt="{{ page.coveralt }}">
   <article>
     {% if page.cover %}
-      <img class="cover" src="{{ page.cover }}" alt="{{ page.coveralt }}">
+      <img class="cover" src="{{ site.url }}/{{ page.cover }}" alt="{{ page.coveralt }}">
     {% endif %}
 
     {{ content }}
