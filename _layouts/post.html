@@ -4,6 +4,10 @@ layout: default
 <page-pane flex theme="{{ page.theme }}" pageTitle="{{ page.title }}" icon="{{ page.icon }}"
 coverSrc="{% if page.cover %}{{ site.url }}/{{ page.cover }}{% endif %}" coverAlt="{{ page.coveralt }}">
   <article>
+    {% if page.cover %}
+      <img class="cover" src="{{ page.cover }}" alt="{{ page.coveralt }}">
+    {% endif %}
+
     {{ content }}
 
     <section id="edit-on-github">
