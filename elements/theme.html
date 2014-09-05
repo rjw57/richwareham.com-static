@@ -43,7 +43,10 @@
   }
   article > pre > code {
     padding: 8px 16px !important; /* Overriding hljs' default */
-    overflow-x: auto;
+    overflow: auto;
+  }
+  article > pre {
+    margin: 0;
   }
 
   /* Centre images in articles */
@@ -60,12 +63,21 @@
   /* Disqus comments */
   #comments { padding: 8px 16px 0px 16px; }
 
-  /* Edit on GitHub notes */
-  #edit-on-github {
+  /* Edit on GitHub notes and preambles */
+  .preamble { margin: 0; }
+
+  #edit-on-github, .preamble {
     font-size: 12px;
-    padding: 8px 16px;
     background-color: rgba(0,0,0,0.12);
     color: #444;
+    padding: 8px 16px;
+  }
+
+  /* IPython input and output */
+  .ipynb-output-prompt {
+    text-align: center;
+    color: rgba(255,255,255,0.54);
+    background-color: rgba(0,0,0,0.84);
   }
 
   #edit-on-github a, #edit-on-github a:hover, #edit-on-github a:visited {
