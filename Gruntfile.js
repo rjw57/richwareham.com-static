@@ -141,6 +141,9 @@ module.exports = function(grunt) {
   // Task to run vulcanize, jekyll, app engine server, compass watch, vulcanize watch
   grunt.registerTask('default', ['concurrent']);
 
+  // Task to run vulcanize and build the jekyll site without fetching publications
+  grunt.registerTask('quickbuild', ['vulcanize', 'jekyll:build', 'copy:components']);
+
   // Task to run vulcanize and build the jekyll site
   grunt.registerTask('build', ['fetchpubs', 'vulcanize', 'jekyll:build', 'copy:components']);
 };
