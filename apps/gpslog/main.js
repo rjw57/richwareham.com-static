@@ -9,14 +9,10 @@ $(document).ready(function() {
     subdomains: '1234',
   }).addTo(map);
 
-  var traceLayer = L.geoJson().addTo(map);
+  // The logGeoJSON object is initialised explicitly in the index.html returned
+  // from the server.
+  var traceLayer = L.geoJson(logGeoJSON).addTo(map);
 
-  console.log('Setup complete. Requesting data.');
-
-  // Kick off a request to get the GPS log as a GeoJSON feature collection
-  $.getJSON('log', function(data) {
-    console.log('Data received. Adding to map.');
-    traceLayer.addData(data);
-    map.fitBounds(traceLayer.getBounds(), { padding: [10, 10], });
-  });
+  // Zoom to fit
+  map.fitBounds(traceLayer.getBounds(), { padding: [10, 10], });
 });
