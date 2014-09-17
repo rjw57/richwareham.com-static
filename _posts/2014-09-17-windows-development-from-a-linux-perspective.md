@@ -179,7 +179,7 @@ Just Build (TM).
 All of my external dependencies are either NuGet-able or are packaged as
 re-distributable ``.msi`` instalers. After some Googling for the correct
 PowerShell incantation, getting Bonjour and the Kinect SDKs auto-installing on
-the test boxes was easy enough and the BuGet packages are downloaded
+the test boxes was easy enough and the NuGet packages are downloaded
 automatically by MSBuild.
 
 I chose to have the non-NuGet dependencies in a [separate
