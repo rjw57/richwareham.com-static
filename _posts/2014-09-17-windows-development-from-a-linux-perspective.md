@@ -204,7 +204,9 @@ in that regard but, from what Googling I performed, it looks like WPF is a bit
 of a dead-end for developing GUIs.) As it was, there would be the tiniest of
 tiniest bits of GUI development for the server. I wanted most of the guts to
 live in a library (or "assembly" in Micro-speak) and have the GUI basically be
-a start/stop button and a log window.
+a start/stop button and a log window. See below:
+
+![]({{ site.url }}/images/streamkinect2-2014-09-17.png)
 
 I'm a firm believer in separate modules and composable software and so the GUI
 shell is just that: a shell. There's also a console version of the server in
