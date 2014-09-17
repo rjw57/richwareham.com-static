@@ -30,7 +30,7 @@ future problem of getting Python to talk to the Kinect for Windows SDK.
 
 The "Windows way" in this case is undoubtedly .NET and Visual Studio. What
 follows are some of my experiences trying to determine what the Windows way is
-and trying to follow it. I should not that the last time I did any Windows
+and following it. I should note that the last time I did any Windows
 programming was a long time ago in a different job and in a completely
 different field. It was also in C++. I've very little experience with .NET
 development. This was the project to learn. [The
