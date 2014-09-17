@@ -209,7 +209,9 @@ a start/stop button and a log window. See below:
 ![]({{ site.url }}/images/streamkinect2-2014-09-17.png)
 
 I'm a firm believer in separate modules and composable software and so the GUI
-shell is just that: a shell. There's also a console version of the server in
+shell is just that: a shell. The [core logic](https://github.com/rjw57/streamkinect2.net/blob/master/StreamKinect2GUI/MainForm.cs) is very small.
+There's also a [console version](https://github.com/rjw57/streamkinect2.net/tree/master/ExampleServer)
+of the server in
 the repository which is actually how I run it most of the time. Since there is
 so little of it, having the GUI code be a bit ugly isn't a problem.
 
