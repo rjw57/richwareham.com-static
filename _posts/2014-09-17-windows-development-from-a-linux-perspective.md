@@ -202,7 +202,7 @@ The way that Windows Forms does GUI designing is a little dirty. I prefer a
 more explicit separation between UI layout and logic. (WPF seems to be better
 in that regard but, from what Googling I performed, it looks like WPF is a bit
 of a dead-end for developing GUIs.) As it was, there would be the tiniest of
-tiniest bits of GUI development for the server. I wanted most of the guts to
+tiny bits of GUI development for the server. I wanted most of the guts to
 live in a library (or "assembly" in Micro-speak) and have the GUI basically be
 a start/stop button and a log window. See below:
 
