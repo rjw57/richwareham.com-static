@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     watch: {
       elements: {
         files: ['elements/**/*.html', '**/*.md'],
-        tasks: ['vulcanize', 'jekyll:devel'],
+        tasks: ['vulcanize', 'jekyll:devel', 'copy:components'],
         options: {
           spawn: false,
         }
