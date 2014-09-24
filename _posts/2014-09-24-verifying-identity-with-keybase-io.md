@@ -11,7 +11,7 @@ be verified as being signed by my private key then you can trust that, at that
 point, my twitter account was controlled by someone who also had access to my
 private key. The same assertions can be made about GitHub accounts by signing
 [a gist](https://gist.github.com/rjw57/f2f7b7b2da6ed3cc149c) which makes a
-similar assertion.
+similar statement.
 
 Assuming that one trusts a user to be savvy enough to revoke these assertions
 if they believe their private key is compromised, this provides a fairly strong
