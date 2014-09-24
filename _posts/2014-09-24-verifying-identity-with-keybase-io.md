@@ -36,7 +36,7 @@ that a Twitter account is controlled by someone with access to a private key
 then you can have some confidence that anything signed by that private key came
 from the same person. Finally, it's useful to be able to say that
 ``@john_q_rockstar`` on Twitter is the same as the person running
-``https://johnqrockstar.com/`` without relying on there being Twitter
+``https://johnqrockstar.com/`` without relying on there being a Twitter
 "verified" tick.
 
 # So, how does it work?
