@@ -3,6 +3,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 <script>
   // Once Polymer has finished working its magic, let highlightjs do its magic.
+  hljs.configure({
+      languages: [], // disable auto-detection of languages
+  });
   document.addEventListener('polymer-ready', hljs.initHighlighting);
 </script>
 
