@@ -87,7 +87,7 @@ manually but a) I don't know which letters to use for which symbols and b) this
 is highly error prone. Instead, I wondered if I could write a Python program to
 extract a list of symbols for me.
 
-## Extracting images for each symbol
+# Extracting images for each symbol
 
 The first thing to do is snip an image containing each symbol in the input.
 Counting them, I see the grid is 24 symbols across and 15 down. Let's try to
@@ -201,7 +201,7 @@ imshow(snipped_regions, cmap='gray', clim=(0,255))
 Excellent, they look nice. The next step will be to match each region to a
 corresponding "symbol id".
 
-## Computing feature vectors
+# Computing feature vectors
 
 We can't directly compare the pixel values in each region. It is likely that my
 rough centre-points are not exact and there is a non-uniform background in the
@@ -310,7 +310,7 @@ print("Feature vectors has shape: " + str(feat_vecs.shape))
     Feature vectors has shape: (360, 96)
 
 
-## Matching symbols
+# Matching symbols
 
 We need a set of symbols to match with and so I manyally went through the image
 and found the indices of the first example of each kind of symbol:
@@ -512,7 +512,7 @@ print(transcription)
     
 
 
-## Conclusions
+# Conclusions
 
 We've successfully used Python to avoid the tedium of having to transcribe a
 sheet of symbols by hand. Techniques such as this are used by actual OCR
