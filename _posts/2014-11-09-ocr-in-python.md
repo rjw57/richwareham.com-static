@@ -436,7 +436,7 @@ imshow(synthetic_snipped_regions - snipped_regions, cmap='gray', clim=(-255,255)
 ![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_32_1.png)
 
 
-Looks good. If we had got any matches wrong we would have a bery strong white or
+Looks good. If we had got any matches wrong we would have a very strong white or
 black line where the matched symbol differed from the actual. The final step is
 to turn the match indexes into a transcription. We'll write out the code again
 using the symbol index in place of the symbol:
