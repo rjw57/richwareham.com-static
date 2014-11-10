@@ -312,7 +312,7 @@ print("Feature vectors has shape: " + str(feat_vecs.shape))
 
 # Matching symbols
 
-We need a set of symbols to match with and so I manyally went through the image
+We need a set of symbols to match with and so I manually went through the image
 and found the indices of the first example of each kind of symbol:
 
 
