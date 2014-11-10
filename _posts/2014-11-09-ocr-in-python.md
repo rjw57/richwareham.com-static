@@ -208,7 +208,7 @@ rough centre-points are not exact and there is a non-uniform background in the
 image. (I.e. the "wartime paper" effect.) Instead we want to manipulate the
 images to exctract a vector of features which are tolerant to small shifts or
 small changes in intensity. Fortunately I have just a thing in my little bag of
-tricks a [Python implementation of the Dual-Tree Complex Wavelt
+tricks a [Python implementation of the Dual-Tree Complex Wavelet
 Transform](https://github.com/rjw57/dtcwt).
 
 It's not required to know the specifics of the transform but see what happens if
