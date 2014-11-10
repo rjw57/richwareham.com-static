@@ -92,7 +92,7 @@ extract a list of symbols for me.
 The first thing to do is snip an image containing each symbol in the input.
 Counting them, I see the grid is 24 symbols across and 15 down. Let's try to
 form an array of centre pixel locations for each symbol. Using IPython, I can
-fidle around witht he values below until the dots line up roughly with the
+fidle around with the values below until the dots line up roughly with the
 symbols:
 
 
