@@ -10,7 +10,6 @@ module.exports = function(grunt) {
       },
       devel: {
         options: {
-          drafts: true,
         },
       },
       serve: {
@@ -60,8 +59,8 @@ module.exports = function(grunt) {
       components: {
         files: [
           {
-            expand: true, src: [ 'js/bower_components/platform/**' ],
-            dest: '_site/components/platform/',
+            expand: true, src: [ 'js/bower_components/webcomponentsjs/**' ],
+            dest: '_site/components/webcomponentsjs/',
             flatten: true,
           },
         ],
