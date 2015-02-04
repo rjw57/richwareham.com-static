@@ -1,21 +1,58 @@
 /* tiles on the home page */
 
+.hp-top {
+  padding: 8px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .hp-section-card {
-  padding: 0.5em;
+  padding: 8px;
 
   .hp-card {
     @extend .z-depth-2;
     display: block; width: 100%; height: 100%;
+    background-size: cover; background-repeat: no-repeat;
+    background-position: 50%, 30%;
     color: white;
+
+    .icon {
+      i { font-size: 32px; line-height: 32px; }
+      width: 32px; display: inline-block;
+      margin: 8px 4px 8px 12px;
+      float: left;
+      fill: white;
+    }
+
+    .label {
+      display: block;
+      padding: 16px 0.5em;
+      height: 48px;
+      font-size: 16px;
+      line-height: 16px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
 .hp-section-card[featured] {
   .hp-card {
+    @extend .valign-wrapper;
+
     .label {
-      width: 100%; display: block;
+      width: 100%;
       background-color: rgba(0,0,0,0.5);
-      padding: 0.25em 0.5em;
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+
+    .icon {
+      @extend .center-align;
+      width: 100%; margin: 0;
+      i { font-size: 112px; }
     }
   }
 }
