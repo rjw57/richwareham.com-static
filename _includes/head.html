@@ -7,8 +7,25 @@
   <link rel="canonical"
     href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Custom CSS -->
-  <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
+  <!-- jQuery required for... well, everything -->
+  <script src="{{ "/extern/bower/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+  <!-- Materialize framework -->
+  <script src="{{ "/extern/bower/materialize/dist/js/materialize.min.js" | prepend: site.baseurl }}"></script>
+
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/zenburn.min.css">
+  <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="{{ "/css/site.css" | prepend: site.baseurl }}">
+
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+    });
+  </script>
 
   <!--
   <script src="{{site.url}}/components/webcomponentsjs/webcomponents.min.js"></script>

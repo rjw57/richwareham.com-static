@@ -5,3 +5,5 @@ _site
 *.pyc
 publications.json
 static.zip
+.sass-cache
+extern/bower

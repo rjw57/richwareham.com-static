@@ -5,17 +5,27 @@ layout: default
 coverSrc="{% if page.cover %}{{ site.url }}/{{ page.cover }}{% endif %}" coverAlt="{{ page.coveralt }}"> -->
 <article>
   {% if page.cover %}
-    <img class="cover" src="{{ site.url }}/{{ page.cover }}" alt="{{ page.coveralt }}">
+  <div class="cover-img" style="background-image: url({{ site.baseurl }}/{{ page.cover }});">
+    <img src="{{ site.url }}/{{ page.cover }}" alt="{{ page.coveralt }}">
+  </div>
   {% endif %}
 
-  {{ content }}
+  <section class="article-title {{page.theme}}">
+    <p>{{ page.title }}</p>
+  </section>
+
+  <section class="article-body">
+    {{ content }}
+  </section>
 
   <section id="edit-on-github">
-    Notice any errors or omissions in this post? Feel free to
-    <a href="{{ site.github_root }}/{{ page.path }}">
+    <p>
+      Notice any errors or omissions in this post? Feel free to
+      <a href="{{ site.github_root }}/{{ page.path }}">
       edit it on GitHub
     </a>
-    and send me a pull request.
+      and send me a pull request.
+    </p>
   </section>
 
   <section id="comments">
