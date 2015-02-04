@@ -21,7 +21,7 @@ article {
   }
 
   .article-body {
-    @extend .flow-text, .container;
+    @extend .container;
 
     /* IPython input and output */
     .ipynb-output-prompt {
@@ -41,6 +41,10 @@ article {
       margin-bottom: 0;
 
       @extend .z-depth-2;
+    }
+
+    p {
+      @extend .flow-text;
     }
 
     p > img {
