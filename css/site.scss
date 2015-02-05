@@ -4,72 +4,8 @@ layout: none
 
 // Import the materialize sass. Note that this does *not* fix up paths.
 @import 'materialize';
-
 @import 'tiles';
+@import 'article';
 
-article {
-  .article-title {
-    @extend .z-depth-1;
-    width: 100%;
-    color: white;
-
-    p {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      @extend .container, .flow-text;
-    }
-  }
-
-  .article-body {
-    @extend .container;
-
-    /* IPython input and output */
-    .ipynb-output-prompt {
-      font-size: 11pt !important;
-      line-height: 14pt !important;
-      text-align: center;
-      color: rgba(255,255,255,0.54);
-      background-color: rgba(0,0,0,0.84);
-
-      @extend .z-depth-1;
-    }
-
-    pre {
-      font-size: 11pt !important;
-      line-height: 14pt !important;
-      margin-top: 0;
-      margin-bottom: 0;
-
-      @extend .z-depth-2;
-    }
-
-    p {
-      @extend .flow-text;
-    }
-
-    p > img {
-      @extend .responsive-img, .z-depth-2;
-      margin: 0 auto; display: block; background-color: white;
-    }
-  }
-
-  #edit-on-github, #comments {
-    @extend .container;
-  }
-
-  .preamble, #edit-on-github > p {
-    @extend .card-panel;
-  }
-
-  .cover-img {
-    width: 100%;
-    height: 20em;
-    @extend .z-depth-1;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%, 30%;
-
-    img { display: none; }
-  }
-}
+// I personally think the fonts are a little too large by default
+html { font-size: 80%; }

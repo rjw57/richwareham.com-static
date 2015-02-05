@@ -5,14 +5,16 @@ layout: default
 coverSrc="{% if page.cover %}{{ site.url }}/{{ page.cover }}{% endif %}" coverAlt="{{ page.coveralt }}"> -->
 <article>
   {% if page.cover %}
-  <div class="cover-img" style="background-image: url({{ site.baseurl }}/{{ page.cover }});">
-    <img src="{{ site.url }}/{{ page.cover }}" alt="{{ page.coveralt }}">
-  </div>
+    <section class="article-title cover-img {{page.theme}}"
+        style="background-image: url({{ site.baseurl }}/{{ page.cover }});">
+      <img src="{{ site.url }}/{{ page.cover }}" alt="{{ page.coveralt }}">
+      <p>{{ page.title }}</p>
+    </section>
+  {% else %}
+    <section class="article-title {{page.theme}}">
+      <p>{{ page.title }}</p>
+    </section>
   {% endif %}
-
-  <section class="article-title {{page.theme}}">
-    <p>{{ page.title }}</p>
-  </section>
 
   <section class="article-body">
     {{ content }}
