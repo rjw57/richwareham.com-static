@@ -1,0 +1,83 @@
+// Styles for pages and artivles
+
+article {
+  // The title of an article is a single color bar.
+  .article-title {
+    @extend .z-depth-1;
+    width: 100%;
+    color: white;
+    margin-bottom: 1rem;
+
+    p {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      font-weight: 300;
+      @extend .container;
+    }
+  }
+
+  .article-title.cover-img {
+    @extend .valign-wrapper;
+    min-height: 20rem;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%, 30%;
+    img { display: none; }
+
+    p {
+      @extend .center-align, .valign;
+      background-color: rgba(0,0,0,0.66);
+      border-radius: 8px;
+    }
+  }
+
+  .article-body {
+    @extend .flow-text;
+
+    p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, pre > code {
+      @extend .container;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* IPython input and output */
+    .ipynb-output-prompt { display: none; }
+
+    pre {
+      font-size: 11pt !important;
+      line-height: 14pt !important;
+      margin: 1rem 0;
+      padding: 1rem 0;
+      background-color: #3f3f3f; // HACK
+
+      @extend .z-depth-2;
+    }
+
+    p > img {
+      @extend .responsive-img, .z-depth-2;
+      margin: 0 auto; display: block; background-color: white;
+    }
+
+    .preamble {
+      @extend .container, .grey-text;
+      padding-bottom: 1rem;
+
+      a, a:visited { @extend .grey-text, .text-darken-2; }
+    }
+  }
+
+  #edit-on-github {
+    @extend .container, .flow-text, .grey-text;
+    a, a:visited { @extend .grey-text, .text-darken-2; }
+  }
+
+  #edit-on-github, #comments {
+    @extend .container;
+  }
+}
+
