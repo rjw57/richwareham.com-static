@@ -206,7 +206,7 @@ tiny bits of GUI development for the server. I wanted most of the guts to
 live in a library (or "assembly" in Micro-speak) and have the GUI basically be
 a start/stop button and a log window. See below:
 
-![]({{ site.url }}/images/streamkinect2-2014-09-17.png)
+![]({{ "/images/streamkinect2-2014-09-17.png" | prepend: site.baseurl }})
 
 I'm a firm believer in separate modules and composable software and so the GUI
 shell is just that: a shell. The [core logic](https://github.com/rjw57/streamkinect2.net/blob/master/StreamKinect2GUI/MainForm.cs) is very small.

@@ -59,7 +59,7 @@ you've created the application, you'll be given a page of OAuth settings like th
 
 [create-app]: https://dev.twitter.com/apps
 
-![OAuth settings for a Twitter application]({{ site.url }}/images/geolocating-twython/twitter-api-key.png)
+![OAuth settings for a Twitter application]({{ "/images/geolocating-twython/twitter-api-key.png" | prepend: site.baseurl }})
 
 I've blanked out the consumer ker and consumer secret here. I created a `credentials.py` file with the credentials
 pasted in as follows:
@@ -96,11 +96,11 @@ webbrowser.open_new_tab(auth['auth_url'])
 
 If all has gone well, Twitter's authorisation page should pop up.
 
-![Twitter's authorisation page]({{ site.url }}/images/geolocating-twython/twitter-auth-page.png)
+![Twitter's authorisation page]({{ "/images/geolocating-twython/twitter-auth-page.png" | prepend: site.baseurl }})
 
 You want to use your own application, I presume, and so after clicking 'Authorize [sic] app' we get a PIN:
 
-![The PIN presented after authorisation]({{ site.url }}/images/geolocating-twython/twitter-pin.png)
+![The PIN presented after authorisation]({{ "/images/geolocating-twython/twitter-pin.png" | prepend: site.baseurl }})
 
 This PIN is the secret needed to get to the final stage of the dance: convincing Twitter that we are who we say we are,
 the user is aware of us and that they've allowed us to do the things we're going to do.
@@ -315,7 +315,7 @@ $ foldbeam-render \
 The long string passed to the `--proj` option comes from
 [a spatialreference.org entry](http://spatialreference.org/ref/sr-org/22/). Specifically, it's the Proj4 string linked
 to from that page. If you want, you can
-[download the resulting map]({{ site.url }}/downloads/geolocating-twython/world-map-gall.tiff).
+[download the resulting map]({{ "/downloads/geolocating-twython/world-map-gall.tiff" | prepend: site.baseurl }}).
 
 Before we go any further, we should make sure to import NumPy and matplotlib:
 
@@ -395,7 +395,7 @@ weather maps showing rainfall intensity which seems appropriate:
 imshow(np.sqrt(ios), cmap=cm.spectral)
 ```
 
-![The raw tweet histogram]({{ site.url }}/images/geolocating-twython/raw-histogram.png)
+![The raw tweet histogram]({{ "/images/geolocating-twython/raw-histogram.png" | prepend: site.baseurl }})
 
 We use `np.sqrt` to "squash" the range of values so that very large tweet counts do not swamp the smaller ones. Feel
 free to experiment with removing the square root and see what the effect is.
@@ -410,7 +410,7 @@ kern_row /= np.sum(kern_row)
 plot(kern_row)
 ```
 
-![A 1-d Gaussian]({{ site.url }}/images/geolocating-twython/1d-gaussian.png)
+![A 1-d Gaussian]({{ "/images/geolocating-twython/1d-gaussian.png" | prepend: site.baseurl }})
 
 And, since a 2-d Gaussian is separable, making the 2-d version is just a case of taking the outer product:
 
@@ -419,7 +419,7 @@ kernel = np.outer(kern_row, kern_row)
 imshow(kernel, interpolation='nearest')
 ```
 
-![A 2-d Gaussian]({{ site.url }}/images/geolocating-twython/2d-gaussian.png)
+![A 2-d Gaussian]({{ "/images/geolocating-twython/2d-gaussian.png" | prepend: site.baseurl }})
 
 Blurring the heat map is then pretty easy:
 
@@ -429,7 +429,7 @@ imshow(np.sqrt(convolve2d(android, kernel, mode='same')), cmap=cm.spectral)
 axis('off')
 ```
 
-![A blurred heat map]({{ site.url }}/images/geolocating-twython/blur-heat-map.png)
+![A blurred heat map]({{ "/images/geolocating-twython/blur-heat-map.png" | prepend: site.baseurl }})
 
 Putting it all together, we can overlay the heat map atop the base map in two lines:
 
@@ -451,8 +451,8 @@ tight_layout()
 savefig('ios-usage.png')
 ```
 
-![A heat map of iOS devices]({{ site.url }}/images/geolocating-twython/ios.png)
-![A heat map of Android devices]({{ site.url }}/images/geolocating-twython/android.png)
+![A heat map of iOS devices]({{ "/images/geolocating-twython/ios.png" | prepend: site.baseurl }})
+![A heat map of Android devices]({{ "/images/geolocating-twython/android.png" | prepend: site.baseurl }})
 
 Now, bear in mind that these results were generated during the UK's lunch time and so there'll be a bias toward the UK
 and Western Europe. That being said quite a few things are obvious:

@@ -10,7 +10,7 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{site.url}}/downloads/2014-09-05-counting-sneezes.ipynb) or
+[downloaded]({{ "/downloads/2014-09-05-counting-sneezes.ipynb" | prepend: site.baseurl }}) or
 [viewed online]({{ site.nbviewer_root }}/downloads/2014-09-05-counting-sneezes.ipynb).
 
 The [sneeze count](http://sneezecount.joyfeed.com/) website catalogues one

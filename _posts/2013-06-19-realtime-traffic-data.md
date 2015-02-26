@@ -194,7 +194,7 @@ lc = LineCollection(location_segments.values())
 gca().add_collection(lc)
 axis('equal')
 ```
-![Our first plot of England's roads]({{ site.url }}/images/realtime-traffic-data/figure1.png)
+![Our first plot of England's roads]({{ "/images/realtime-traffic-data/figure1.png" | prepend: site.baseurl }})
 
 The road network is recognisable there but England appears squashed. That's because the co-ordinates are latitudes and
 longitudes. Using these directly to plot a graph is something called the [equirectangular] projection. This projection
@@ -284,7 +284,7 @@ gca().add_collection(lc)
 axis('equal')
 ```
 
-![England's roads on the OSNG]({{ site.url }}/images/realtime-traffic-data/figure2.png)
+![England's roads on the OSNG]({{ "/images/realtime-traffic-data/figure2.png" | prepend: site.baseurl }})
 
 Notice how the distortion of England is now reduced and, also, that the plot's x- and y-axes are now in metres.
 
@@ -293,7 +293,7 @@ Notice how the distortion of England is now reduced and, also, that the plot's x
 It would be nice to get a base map under the road network so that we can orient ourselves with respect to major cities
 and the coastline of England. The [GeoTIFF](http://en.wikipedia.org/wiki/GeoTIFF) format is a variant of the TIFF image
 format which can contain information about projection and geographic boundaries. Using my [foldbeam] tool, I've
-generated a suitable GeoTIFF which can be [downloaded]({{ site.url }}/downloads/england-basemap-osgrid.tiff) from this
+generated a suitable GeoTIFF which can be [downloaded]({{ "/downloads/england-basemap-osgrid.tiff" | prepend: site.baseurl }}) from this
 website. The GDAL library can also be used to load this image. I'll assume you've downloaded it to a directory and set
 the `DOWNLOADS_DIR` variable to the path of that directory. Opening the base map image is then very simple indeed:
 
@@ -347,7 +347,7 @@ lc = LineCollection(segment_coords)
 gca().add_collection(lc)
 ```
 
-![England's roads with a base map]({{ site.url }}/images/realtime-traffic-data/figure3.png)
+![England's roads with a base map]({{ "/images/realtime-traffic-data/figure3.png" | prepend: site.baseurl }})
 
 ## Offsetting each carriageway
 
@@ -405,7 +405,7 @@ lc = LineCollection(segment_coords,
 gca().add_collection(lc)
 ```
 
-![England's road network with overlapping roads offset]({{ site.url }}/images/realtime-traffic-data/figure4.png)
+![England's road network with overlapping roads offset]({{ "/images/realtime-traffic-data/figure4.png" | prepend: site.baseurl }})
 
 # Journey times
 
@@ -543,7 +543,7 @@ gca().get_xaxis().set_visible(False)
 gca().get_yaxis().set_visible(False)
 ```
 
-![England's road network with journey delays]({{ site.url }}/images/realtime-traffic-data/figure5.png)
+![England's road network with journey delays]({{ "/images/realtime-traffic-data/figure5.png" | prepend: site.baseurl }})
 
 You can see at the current time of writing, the road network of the UK is in a pretty good state.
 
