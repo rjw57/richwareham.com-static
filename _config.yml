@@ -1,13 +1,16 @@
 # Site settings
-title: Clean Blog
+title: "Rich Wareham"
+email: rich@richwareham.com
+description: "Rich Wareham's personal website"
+twitter_username: richwareham
+github_username:  rjw57
+github_root: "https://github.com/rjw57/richwareham.com-static/tree/master/"
+nbviewer_root: "http://nbviewer.ipython.org/url/richwareham.com"
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: "/startbootstrap-clean-blog-jekyll"
 url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+#baseurl: ""
+#url: ""
 
 # Build settings
 markdown: kramdown
@@ -15,3 +18,23 @@ highlighter: pygments
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","README.md","previous"]
+
+kramdown:
+  use_coderay: false
+  enable_coderay: false
+  input: GFM
+  hard_wrap: false
+
+# Explicitly include some files
+include: ["publications.json"]
+
+# Defaults for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      theme: "blue"
+      layout: "post"
+      author: "Rich Wareham"
