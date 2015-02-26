@@ -1,0 +1,15 @@
+<link rel="import" href="../js/bower_components/polymer/polymer.html">
+
+<polymer-element name="paper-icon-link" noscript
+    extends="paper-icon-button" attributes="icon label href">
+  <template>
+    <style>
+      a, a:hover, a:focus, a:visited { color: inherit !important; }
+    </style>
+    <a href="{{ href }}" id="link">
+      <shadow></shadow>
+    </a>
+  </template>
+</polymer-element>
+
+

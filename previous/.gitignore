@@ -1,0 +1,9 @@
+node_modules
+js/bower_components
+_site
+*.vulcanized.html
+*.pyc
+publications.json
+static.zip
+.sass-cache
+extern/bower

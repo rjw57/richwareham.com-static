@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="{% if page.theme %}{{ page.theme }}{% else %}grey{% endif %} lighten-5">
+    <nav class="blue-grey">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="brand-logo" href="{{ site.baseurl }}/">Rich Wareham</a>
+        </div>
+
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="{{ site.baseurl }}/articles">Articles</a></li>
+          <li><a href="{{ site.baseurl }}/research">Research</a></li>
+          <li><a href="{{ site.baseurl }}/software">Software</a></li>
+          <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
+        </ul>
+
+        <a class="button-collapse" href="#" data-activates="nav-mobile">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+      </div>
+    </nav>
+
+    {{content}}
+  </body>
+</html>

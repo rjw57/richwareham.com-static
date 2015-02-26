@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- jQuery required for... well, everything -->
+  <script src="{{ "/extern/bower/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+
+  <!-- Materialize framework -->
+  <script src="{{ "/extern/bower/materialize/dist/js/materialize.min.js" | prepend: site.baseurl }}"></script>
+
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/zenburn.min.css">
+  <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="{{ "/css/site.css" | prepend: site.baseurl }}">
+
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+    });
+  </script>
+
+  <!--
+  <script src="{{site.url}}/components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="/elements/elements.vulcanized.html">
+  -->
+
+  <!-- Google analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-41877401-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>

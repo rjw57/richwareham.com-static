@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- "Add to homescreen" and mobile-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- JQuery from their CDN (supports HTTPS) -->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Our own copy of Leaflet (no HTTPS CDN) -->
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <script src="vendor/leaflet/leaflet.js"></script>
+
+    <!-- Custom styling and logic -->
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+    <script>var logGeoJSON={{ geojsonlog | tojson | safe }};</script>
+
+    <title>richwareham.com GPS logger</title>
+  </head>
+  <div id="map"></div>
+</html>
