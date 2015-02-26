@@ -2,6 +2,7 @@
 layout: page
 title: Contact Information
 permalink: /contact/
+topleveltitle: Contact
 theme: teal
 icon: communication:message
 ---

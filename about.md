@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Rich
+topleveltitle: About
 permalink: /about/
 ---
 
