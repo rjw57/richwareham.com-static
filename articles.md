@@ -25,5 +25,5 @@ ordered by year and month.
 ## {{ month }}
   {% endif %}
 
-  <a href="{{ post.url }}">{{ post.title }}</a>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 {% endfor %}
