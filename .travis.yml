@@ -1,8 +1,7 @@
 language: ruby
 install:
 - bundle install
-- npm install
-- node_modules/.bin/bower install
+- scripts/install_deps.sh
 script:
   - node scripts/fetch_pubs.js
   - bundle exec jekyll build
