@@ -57,16 +57,17 @@ hr.small {
 }
 
 @import url(//fonts.googleapis.com/css?family=Inconsolata);
-p code {
-  padding: 0; color: inherit; background: none;
-  font-family: 'Inconsolata', monospace;
-  font-size: 110%;
-}
+code { font-family: 'Inconsolata', monospace; }
+p code { padding: 0; color: inherit; background: none; font-size: 110%; }
 
 // Articles
 
 article {
-  pre { background-color: #3f3f3f; }
+  .preamble {
+    color: @gray; font-size: 80%;
+    a, a:visited { color: @gray; }
+  }
+  pre { background-color: #3f3f3f; font-size: 90%; }
   .ipynb-output-prompt { color: #aaa; margin: 1ex 0; padding: 0 3em; }
   p > img { margin: 0 auto; display: block; }
 }
@@ -255,43 +256,51 @@ article {
 // Post Preview Pages
 
 .post-preview {
-  > a {
-    color: @gray-dark;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: @brand-primary;
-    }
-    > .post-title {
-      font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-    > .post-subtitle {
-      margin: 0;
-      font-weight: 300;
-      margin-bottom: 10px;
-    }
-  }
-  > .post-meta {
-    color: @gray;
-    font-size: 18px;
-    font-style: italic;
-    margin-top: 0;
+  .background-cover;
+  background-position: 50% 33%;
+  border-radius: 8px;
+  > .post-preview-inner {
+    padding: 2px 25px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 8px;
     > a {
-      text-decoration: none;
-      color: @gray-dark;
+      color: white;
       &:hover,
       &:focus {
-        color: @brand-primary;
-        text-decoration: underline;
+        text-decoration: none;
+        color: lighten(@brand-primary, 50%);
+      }
+      > .post-title {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      > .post-subtitle {
+        margin: 0;
+        font-weight: 300;
+        margin-bottom: 10px;
       }
     }
-  }
-  @media only screen and (min-width: 768px) {
-    > a {
-      > .post-title {
-        font-size: 36px;
+    > .post-meta {
+      color: @gray-light;
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 0;
+      > a {
+        text-decoration: none;
+        color: white;
+        &:hover,
+        &:focus {
+          color: @brand-primary;
+          text-decoration: underline;
+        }
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      > a {
+        > .post-title {
+          font-size: 36px;
+        }
       }
     }
   }
