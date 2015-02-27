@@ -16,18 +16,17 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{'{{'}}site.url{{'}}'}}/downloads/{{ resources.metadata.name }}.ipynb) or
-[viewed online]({{'{{'}} site.nbviewer_root {{'}}'}}/downloads/{{ resources.metadata.name }}.ipynb).
+[downloaded]({{'{{'}} "/downloads/{{ resources.metadata.name }}.ipynb" | prepend: site.baseurl {{'}}'}})
+or [viewed online]({{'{{'}} site.nbviewer_root {{'}}'}}/downloads/{{ resources.metadata.name }}.ipynb).
 {% endblock header %}
 
 {% block in_prompt %}
 {% endblock in_prompt %}
 
 {% block output_prompt %}
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 {% endblock output_prompt %}
 

@@ -10,8 +10,8 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{site.url}}/downloads/2015-02-03-font-from-bbc-rom.ipynb) or
-[viewed online]({{ site.nbviewer_root }}/downloads/2015-02-03-font-from-bbc-rom.ipynb).
+[downloaded]({{ "/downloads/2015-02-03-font-from-bbc-rom.ipynb" | prepend: site.baseurl }})
+or [viewed online]({{ site.nbviewer_root }}/downloads/2015-02-03-font-from-bbc-rom.ipynb).
 
 # Introduction
 
@@ -77,10 +77,9 @@ print('Archive contents: ' + ','.join(os_rom_zip.namelist()))
 assert len(os_rom_zip.filelist) == 1
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Archive contents: OS12.ROM
@@ -114,10 +113,9 @@ n_chars = font.shape[0] // 8
 print('Number of characters: {0}'.format(n_chars))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Number of characters: 96
@@ -133,10 +131,9 @@ from matplotlib.pyplot import *
 imshow(font[:8*3, :], interpolation='none', cmap='gray')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -147,7 +144,7 @@ imshow(font[:8*3, :], interpolation='none', cmap='gray')
 
 
 
-![png]({{ site.baseurl}}/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_17_1.png)
+![png]({{ "/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_17_1.png" | prepend: site.baseurl }})
 
 
 It would be nice to see the entire font as one image. Let's first split it into
@@ -161,10 +158,9 @@ char_arrays = np.split(font, n_chars)
 imshow(char_arrays[20], interpolation='none', cmap='gray')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -175,7 +171,7 @@ imshow(char_arrays[20], interpolation='none', cmap='gray')
 
 
 
-![png]({{ site.baseurl}}/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_19_1.png)
+![png]({{ "/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_19_1.png" | prepend: site.baseurl }})
 
 
 Now we do some advanced juggling to reshape the character array:
@@ -191,10 +187,9 @@ print('Generated font image of shape: ' + 'x'.join(str(x) for x in font_image.sh
 imshow(font_image, cmap='gray', interpolation='none')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Generated font image of shape: 48x128
@@ -208,7 +203,7 @@ imshow(font_image, cmap='gray', interpolation='none')
 
 
 
-![png]({{ site.baseurl}}/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_21_2.png)
+![png]({{ "/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_21_2.png" | prepend: site.baseurl }})
 
 
 And we're a winner. The only thing left to do is to save it as an image for some
@@ -250,10 +245,9 @@ with tempfile.NamedTemporaryFile(suffix='.png') as tf:
 print('Image uploaded to: {0}'.format(upload_result['link']))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Image uploaded to: http://i.imgur.com/7mZVBee.png
@@ -268,16 +262,15 @@ from IPython.display import Image
 Image(upload_result['link'])
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
 
 
-![png]({{ site.baseurl}}/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_27_0.png)
+![png]({{ "/images/2015-02-03-font-from-bbc-rom_files/2015-02-03-font-from-bbc-rom_27_0.png" | prepend: site.baseurl }})
 
 
 

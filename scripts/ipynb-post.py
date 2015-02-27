@@ -24,6 +24,6 @@ c.MarkdownExporter.template_file = 'ipynb-post.tpl'
 def path2support(path):
     """Turn a file path into a URL"""
     parts = path.split(os.path.sep)
-    return '{{ site.baseurl}}/images/' + '/'.join(quote(part) for part in parts)
+    return '{{ "/images/' + '/'.join(quote(part) for part in parts) + '" | prepend: site.baseurl }}'
 
 c.MarkdownExporter.filters = { 'path2support': path2support }

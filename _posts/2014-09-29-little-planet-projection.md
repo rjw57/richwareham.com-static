@@ -8,8 +8,8 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{site.url}}/downloads/2014-09-29-little-planet-projection.ipynb) or
-[viewed online]({{ site.nbviewer_root }}/downloads/2014-09-29-little-planet-projection.ipynb).
+[downloaded]({{ "/downloads/2014-09-29-little-planet-projection.ipynb" | prepend: site.baseurl }})
+or [viewed online]({{ site.nbviewer_root }}/downloads/2014-09-29-little-planet-projection.ipynb).
 
 Recently I shared [a
 post](https://plus.google.com/+RichWareham/posts/a9X2cGV9oDk) on G+ which had a
@@ -50,10 +50,9 @@ pano = np.asarray(Image.open(os.path.expanduser('~/Downloads/PANO_20140927_12451
 plt.imshow(pano)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -64,7 +63,7 @@ plt.imshow(pano)
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_5_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_5_1.png" | prepend: site.baseurl }})
 
 
 Beautiful. The next step is to work out how to warp this image.
@@ -96,10 +95,9 @@ plt.figure(figsize=(10,10)) # A square figure for square output
 plt.imshow(warp(pano, scale_by_5_and_offset, output_shape=(256,256)))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -110,7 +108,7 @@ plt.imshow(warp(pano, scale_by_5_and_offset, output_shape=(256,256)))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_9_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_9_1.png" | prepend: site.baseurl }})
 
 
 # The "little planet" projection
@@ -219,10 +217,9 @@ plt.figure(figsize=(10,10))
 plt.imshow(warp(pano, little_planet_1, output_shape=output_shape))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -233,7 +230,7 @@ plt.imshow(warp(pano, little_planet_1, output_shape=output_shape))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_16_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_16_1.png" | prepend: site.baseurl }})
 
 
 That's not a bad first attempt but it would be nicer if we had a bit more
@@ -247,10 +244,9 @@ rs = np.linspace(0, 1, 100)
 plt.plot(rs, np.sqrt(rs))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -261,7 +257,7 @@ plt.plot(rs, np.sqrt(rs))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_18_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_18_1.png" | prepend: site.baseurl }})
 
 
 So let's modify our little planet projection to take the square root of 𝑟:
@@ -280,10 +276,9 @@ plt.figure(figsize=(10,10))
 plt.imshow(warp(pano, little_planet_2, output_shape=output_shape))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -294,7 +289,7 @@ plt.imshow(warp(pano, little_planet_2, output_shape=output_shape))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_20_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_20_1.png" | prepend: site.baseurl }})
 
 
 That's better. The castle and trees look less warped. It would be nice to have
@@ -323,10 +318,9 @@ plt.figure(figsize=(10,10))
 plt.imshow(warp(pano, little_planet_3, output_shape=output_shape))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -337,7 +331,7 @@ plt.imshow(warp(pano, little_planet_3, output_shape=output_shape))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_22_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_22_1.png" | prepend: site.baseurl }})
 
 
 That's nicer. There's possibly a little too much sky so, finally, let's just
@@ -368,10 +362,9 @@ plt.figure(figsize=(10,10))
 plt.imshow(warp(pano, little_planet_4, output_shape=output_shape))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -382,7 +375,7 @@ plt.imshow(warp(pano, little_planet_4, output_shape=output_shape))
 
 
 
-![png]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_24_1.png)
+![png]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_24_1.png" | prepend: site.baseurl }})
 
 
 # Saving the result
@@ -411,16 +404,15 @@ from IPython.display import Image as display_Image
 display_Image(os.path.expanduser('~/Pictures/little-planet.jpg'))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
 
 
-![jpeg]({{ site.baseurl}}/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_29_0.jpeg)
+![jpeg]({{ "/images/2014-09-29-little-planet-projection_files/2014-09-29-little-planet-projection_29_0.jpeg" | prepend: site.baseurl }})
 
 
 

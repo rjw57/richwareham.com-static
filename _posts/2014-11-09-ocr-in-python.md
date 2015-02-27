@@ -8,8 +8,8 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{site.url}}/downloads/2014-11-09-ocr-in-python.ipynb) or
-[viewed online]({{ site.nbviewer_root }}/downloads/2014-11-09-ocr-in-python.ipynb).
+[downloaded]({{ "/downloads/2014-11-09-ocr-in-python.ipynb" | prepend: site.baseurl }})
+or [viewed online]({{ site.nbviewer_root }}/downloads/2014-11-09-ocr-in-python.ipynb).
 
 This post talks about how to do a simple Optical Character Recognition task in
 Python. But first, why did I want to do this in the first place?
@@ -47,10 +47,9 @@ from io import BytesIO
 code2_im = Image.open(BytesIO(r.content))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Populating the interactive namespace from numpy and matplotlib
@@ -63,10 +62,9 @@ Let's take a look at the clue:
 imshow(code2_im)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -77,7 +75,7 @@ imshow(code2_im)
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_4_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_4_1.png" | prepend: site.baseurl }})
 
 
 As you can see, none of the characters here are the usual alphabetic ones.
@@ -105,10 +103,9 @@ imshow(code2_im, interpolation='none')
 scatter(xs.flat, ys.flat, alpha=0.5)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -119,7 +116,7 @@ scatter(xs.flat, ys.flat, alpha=0.5)
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_8_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_8_1.png" | prepend: site.baseurl }})
 
 
 OK, those points look good. Let's snip out 16 pixels either side of these centre
@@ -144,10 +141,9 @@ regions = regions[:-15] + [np.zeros_like(regions[0]),] * 15
 print("Number of regions: " + str(len(regions)))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Number of regions: 360
@@ -181,10 +177,9 @@ snipped_regions = tile(regions, rows=15)
 imshow(snipped_regions, cmap='gray', clim=(0,255))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -195,7 +190,7 @@ imshow(snipped_regions, cmap='gray', clim=(0,255))
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_13_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_13_1.png" | prepend: site.baseurl }})
 
 
 Excellent, they look nice. The next step will be to match each region to a
@@ -233,10 +228,9 @@ subplot(1,2,2)
 imshow(t2_im, cmap='gray')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -247,7 +241,7 @@ imshow(t2_im, cmap='gray')
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_17_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_17_1.png" | prepend: site.baseurl }})
 
 
 Again, the technicalities of the transform are not of interest to us here but
@@ -266,10 +260,9 @@ subplot(1,2,2)
 imshow(np.abs(t2.highpasses[2][...,0]), interpolation='none')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -280,7 +273,7 @@ imshow(np.abs(t2.highpasses[2][...,0]), interpolation='none')
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_19_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_19_1.png" | prepend: site.baseurl }})
 
 
 Although the images have been shifted a little, the DTCWT coefficients are very
@@ -301,10 +294,9 @@ feat_vecs = np.array(list(compute_region_fv(r) for r in regions))
 print("Feature vectors has shape: " + str(feat_vecs.shape))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Feature vectors has shape: (360, 96)
@@ -326,10 +318,9 @@ exemplars = [
 print("Symbol count: " + str(len(exemplars)-1))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Symbol count: 30
@@ -345,10 +336,9 @@ imshow(
 )
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -359,7 +349,7 @@ imshow(
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_26_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_26_1.png" | prepend: site.baseurl }})
 
 
 We're going to match regions by computing the total difference between the DTCWT
@@ -394,10 +384,9 @@ synthetic_snipped_regions = tile(list(regions[exemplars[m_idx]] for m_idx in mat
 imshow(synthetic_snipped_regions, cmap='gray', clim=(0,255))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -408,7 +397,7 @@ imshow(synthetic_snipped_regions, cmap='gray', clim=(0,255))
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_30_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_30_1.png" | prepend: site.baseurl }})
 
 
 That looks pretty good. What about if we compute the difference between this and
@@ -419,10 +408,9 @@ the original:
 imshow(synthetic_snipped_regions - snipped_regions, cmap='gray', clim=(-255,255))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
@@ -433,7 +421,7 @@ imshow(synthetic_snipped_regions - snipped_regions, cmap='gray', clim=(-255,255)
 
 
 
-![png]({{ site.baseurl}}/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_32_1.png)
+![png]({{ "/images/2014-11-09-ocr-in-python_files/2014-11-09-ocr-in-python_32_1.png" | prepend: site.baseurl }})
 
 
 Looks good. If we had got any matches wrong we would have a very strong white or
@@ -451,10 +439,9 @@ for s_idx, s in enumerate(match_idx):
 print(transcription)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     00 01 02 03 04 05 02 06 05 01 06 07 08 09 10 11 12 13 14 04 15 04 04 05 
@@ -488,10 +475,9 @@ for s_idx, s in enumerate(match_idx):
 print(transcription)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     A B C D E F C G F B G H I J K L M N O E P E E F 

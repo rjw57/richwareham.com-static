@@ -10,8 +10,8 @@ tags:
 
 {:.preamble}
 This post is also available as an IPython notebook which may be
-[downloaded]({{ "/downloads/2014-09-05-counting-sneezes.ipynb" | prepend: site.baseurl }}) or
-[viewed online]({{ site.nbviewer_root }}/downloads/2014-09-05-counting-sneezes.ipynb).
+[downloaded]({{ "/downloads/2014-09-05-counting-sneezes.ipynb" | prepend: site.baseurl }})
+or [viewed online]({{ site.nbviewer_root }}/downloads/2014-09-05-counting-sneezes.ipynb).
 
 The [sneeze count](http://sneezecount.joyfeed.com/) website catalogues one
 person's sneezes since 2007. A work colleague asked how difficult it would be to
@@ -32,10 +32,9 @@ print('\n'.join(urlopen('http://sneezecount.joyfeed.com/feed').read().decode('ut
 print('...')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     ...
@@ -63,10 +62,9 @@ print('\n'.join(urlopen('http://sneezecount.joyfeed.com/feed?paged=2').read().de
 print('...')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     ...
@@ -99,10 +97,9 @@ root = parse_xml_url('http://sneezecount.joyfeed.com/feed?paged=2')
 print(root)
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     <Element 'rss' at 0x7f958d5ccf70>
@@ -129,10 +126,9 @@ def extract_dates(root):
 print(', '.join(str(t) for t in extract_dates(root)))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     1407600579.0, 1407520308.0, 1407389858.0, 1407381140.0, 1407344647.0, 1407255800.0, 1407141500.0, 1407069426.0, 1407009164.0, 1406970003.0
@@ -167,10 +163,9 @@ ts = dates_from_feed_url('http://sneezecount.joyfeed.com/2014/08/feed')
 print(', '.join(str(t) for t in ts))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     1408707685.0, 1408628545.0, 1408563641.0, 1408537639.0, 1408439866.0, 1408275986.0, 1408256591.0, 1408167669.0, 1408131465.0, 1407820127.0, 1407600579.0, 1407520308.0, 1407389858.0, 1407381140.0, 1407344647.0, 1407255800.0, 1407141500.0, 1407069426.0, 1407009164.0, 1406970003.0, 1406870597.0
@@ -191,10 +186,9 @@ thousand and nineteen sneezes. Let's just ckeck that we've got them all:
 print('Fetched {0} sneeze timestamps'.format(len(timestamps)))
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Fetched 4019 sneeze timestamps
@@ -211,10 +205,9 @@ load the pylab environment:
 rcParams['figure.figsize'] = (14,9) # Set the default figure size
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
     Populating the interactive namespace from numpy and matplotlib
@@ -231,14 +224,13 @@ ylabel('Sneezes')
 grid('on')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
-![png]({{ site.baseurl}}/images/2014-09-05-counting-sneezes_files/2014-09-05-counting-sneezes_16_0.png)
+![png]({{ "/images/2014-09-05-counting-sneezes_files/2014-09-05-counting-sneezes_16_0.png" | prepend: site.baseurl }})
 
 
 Possibly more interesting is a histogram of intervals between sneezes:
@@ -253,14 +245,13 @@ ylabel('Count')
 grid('on')
 ```
 
-<div class="ipynb-output-prompt">
-  <core-icon icon="expand-more"></core-icon>
-  output
-  <core-icon icon="expand-more"></core-icon>
+<div class="ipynb-output-prompt clearfix">
+  <div class="pull-left"><i class="fa fa-arrow-down"></i></div>
+  <div class="pull-right"><i class="fa fa-arrow-down"></i></div>
 </div>
 
 
-![png]({{ site.baseurl}}/images/2014-09-05-counting-sneezes_files/2014-09-05-counting-sneezes_18_0.png)
+![png]({{ "/images/2014-09-05-counting-sneezes_files/2014-09-05-counting-sneezes_18_0.png" | prepend: site.baseurl }})
 
 
 # Summary
