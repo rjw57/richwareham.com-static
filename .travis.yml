@@ -1,5 +1,6 @@
 language: ruby
 install:
+- bundle install
 - scripts/install-deps.sh
 script:
   - node scripts/fetch_pubs.js
