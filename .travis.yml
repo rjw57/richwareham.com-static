@@ -1,7 +1,7 @@
 language: ruby
 install:
 - bundle install
-- scripts/install_deps.sh
+- scripts/install-deps.sh
 script:
   - node scripts/fetch_pubs.js
   - bundle exec jekyll build
