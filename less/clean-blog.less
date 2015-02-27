@@ -56,17 +56,18 @@ hr.small {
   border-color: white;
 }
 
-article {
-  pre {
-    background-color: #3f3f3f;
-  }
+@import url(//fonts.googleapis.com/css?family=Source+Code+Pro);
+p code {
+  padding: 0; color: inherit; background: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 110%;
 }
 
 // Articles
 
 article {
+  pre { background-color: #3f3f3f; }
   .ipynb-output-prompt { display: none; }
-
   p > img { margin: 0 auto; display: block; }
 }
 
