@@ -15,8 +15,7 @@ url: "https://www.richwareham.com/"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
-permalink: pretty
+permalink: /articles/:year/:month/:day/:title
 paginate: 5
 exclude: ["less","node_modules","README.md","previous","Gemfile","Gemfile.lock"]
 
