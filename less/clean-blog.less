@@ -67,12 +67,18 @@ article {
     color: @gray; font-size: 80%;
     a, a:visited { color: @gray; }
   }
-  pre { background-color: #3f3f3f; font-size: 90%; }
+  pre { background-color: #3f3f3f; font-size: 80%; }
   .ipynb-output-prompt { color: #aaa; margin: 1ex 0; padding: 0 3em; }
   p > img { margin: 0 auto; display: block; }
 }
 
 // Navigation
+.navbar-custom.is-fixed {
+  .dropdown-menu {
+    background-color: rgba(255,255,255,0.75);
+    a:hover, .divider { background-color: white; }
+  }
+}
 
 .navbar-custom {
   background: white;
@@ -97,9 +103,7 @@ article {
   }
   .dropdown-menu {
     background-color: rgba(0,0,0,0.5);
-    a:hover, .divider {
-      background-color: #444444;
-    }
+    a:hover, .divider { background-color: @gray-light; }
   }
   @media only screen and (min-width: 768px) {
     background: transparent;
