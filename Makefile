@@ -40,7 +40,7 @@ JEKYKLL_DEPS:=$(GENERATED_CSS) $(GENERATED_JS)
 site: $(JEKYKLL_DEPS)
 	$(JEKYLL) build
 serve: $(JEKYKLL_DEPS)
-	$(JEKYLL) serve --watch
+	$(JEKYLL) serve --watch --drafts
 
 # Compile less/... stylesheets to css/...
 css/%.css: less/%.less $(wildcard less/*.less)
