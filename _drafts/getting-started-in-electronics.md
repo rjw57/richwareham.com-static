@@ -5,7 +5,7 @@ cover: images/pcb-board.jpg
 ---
 # Introduction
 
-TODO: Add YouTube playlist for buri.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLQdwYJ5AuTolZuQIYEujwqP3wV1qRbEa8" frameborder="0" allowfullscreen></iframe>
 
 # The essentials
 
@@ -30,7 +30,7 @@ by what I have for free in those boxes rather than what I've bought.
 You can never have enough solderless breadboards. I bought a A4-sized
 whiteboard from Poundland and stuck breadboards to it. This is a lot cheaper
 than buying one of the metal-backed "advanced" breadboard modules. You can see
-it in action here:
+it in action in the videos above and, in an earlier state, below:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lmBjuM0IS_4" frameborder="0" allowfullscreen></iframe>
 
