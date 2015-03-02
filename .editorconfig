@@ -11,3 +11,7 @@ indent_style=space
 [*.html]
 indent_size=4
 indent_style=space
+
+[*.md]
+indent_size=4
+indent_style=space
