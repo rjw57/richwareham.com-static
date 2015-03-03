@@ -5,7 +5,17 @@ cover: images/pcb-board.jpg
 ---
 # Introduction
 
+Towards the end of 2014 I decided that I wanted to learn digital electronics.
+As someone who would self-identify as a software person I only had a relatively
+wooley understanding of what happened at the "sand layer" of my computer. I've
+set myself the project of designing and making a 1980s-era computer called
+"Búri". I've recorded a few YouTube videos on it:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLQdwYJ5AuTolZuQIYEujwqP3wV1qRbEa8" frameborder="0" allowfullscreen></iframe>
+
+This post covers the "bootstrapping" process I went through to get myself to a
+place where I could start learning electronics. Its the set of things I wish I
+knew when I started.
 
 # The essentials
 
@@ -63,13 +73,14 @@ There's a good
 on the use of flip-flops in computer memory if you don't know your "D-type"s
 from your "JK-type"s.
 
-## Knowledge
+# Knowledge
 
-I started with a little basic electronics knowledge from school and a couple of
-courses at University.  I was rather dismissive of electronics ad University
-viewing it as a subject deeply steeped in "magic". As I've gotten older, I've
-realised that electronics people viewed software as similarly being the domain
-of wizards and sorcery. Such is any skill when viewed from outside.
+Once you've got your equipment, you need to start learning.  I started with a
+little basic electronics knowledge from school and a couple of courses at
+University.  I was rather dismissive of electronics ad University viewing it as
+a subject deeply steeped in "magic". As I've gotten older, I've realised that
+electronics people viewed software as similarly being the domain of wizards and
+sorcery. Such is any skill when viewed from outside.
 
 That being said I was aware, perhaps distantly, of the following:
 
@@ -96,11 +107,39 @@ where electrons want to be. [Conventional
 positive-to-negative](http://en.wikipedia.org/wiki/Electric_current#Current)
 current flow predates the discovery that electrons are negatively charged!*
 
-# A first project
+I had, therefore, something of a schoolboy electronics knowledge with some
+pretty large gaps but YouTube provided some important gap-filling mortar. I
+can't stress how useful being able to sit down with a cup of tea and watch the
+odd ten minutes of electronics tutorial videos was.
 
-* [Adventures with Microelectronics](http://www.amazon.co.uk/Adventures-Microelectronics-Tom-Duncan/dp/0719536715)
+## A first project
 
-# A stretch project
+The first circuit that almost anyone does these days is the Arduino "blinking
+LED" circuit. This consists of an LED, a resistor and an Arduino. There's not
+much to that but I like to try and learn a little bit of theory from everything
+I do. The first question which popped into my head was "why do we need the
+resistor?" I'll let the interested reader Google for better explanations than I
+could write here but suffice it to say that I found it pleasing to be able to
+calculate what value that resistor should have. Even the simplest of circuits
+can be a learning opportunity.
+
+From deep in my old bedroom in my parents' house came the book
+[Adventures with Microelectronics](http://www.amazon.co.uk/Adventures-Microelectronics-Tom-Duncan/dp/0719536715).
+I'm sure many similar books exist which were printed *after* the colours brown
+and yellow went out of fashion. This book has a few simple circuits which can
+be built on a breadboard and which cover the basics of wiring things up,
+designing oscillators, etc. If you could find an introductory e-book on
+something Arduino related, that'd probably be just as good. Working through the
+book was the work of a single day but was fun to "get my feet wet".
+
+## A stretch project
+
+I found it important to set a "stretch goal": a project which seemed imposing
+and difficult to begin with but could be broken down into stages which would
+spark off simple projects along the way. As outlined in the introuction, I
+chose to implement a 1980s-style microcomputer. The thought was that if I can
+get to the point where I can compile C, I had "closed the gap" in my knowledge
+between chip and code.
 
 # YouTube: let a thousand lectures bloom
 
