@@ -28,9 +28,8 @@ repeatedly get almost identical recruitment emails. Should I be in the position
 to switch jobs, I shall start by researching opportunities available then and
 there. To paraphrase the oft-used sentence: don't email me, I'll email you.
 
-Thus, I'm asking you nicely to take the rejection implicit in this message with
-the same degree of inpersonality as you showed me but also to please not contact
-me again.
+Hence, I'm asking you to take the rejection implicit in this reply with good
+grace and, please, to not contact me again.
 
 Thanks,
 
