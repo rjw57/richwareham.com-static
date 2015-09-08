@@ -4,8 +4,7 @@ install:
 - bundle install
 - scripts/install-deps.sh
 script:
-  - node scripts/fetch_pubs.js
-  - make
+- make
 after_success:
 - if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_REPO_SLUG" == "rjw57/richwareham.com-static"
   ]; then ./scripts/deploy.sh; fi
