@@ -23,7 +23,7 @@ my publicly listed GitHub email address starts
 I'm fortunate enough to have a very specific set of skills: skills which make me
 very useful for people like you. While I am most grateful for this and do not
 wish to be seen as arrogant, I hope you can understand how galling it is for
-people who often get trawled up when people Google "$BUZZWORD $LOCATION" to
+those who often get trawled up when people Google "$BUZZWORD $LOCATION" to
 repeatedly get almost identical recruitment emails. Should I be in the position
 to switch jobs, I shall start by researching opportunities available then and
 there. To paraphrase the oft-used sentence: don't email me, I'll email you.
