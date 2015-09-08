@@ -10,7 +10,7 @@ I hope you are well.
 
 I've sent you this link because you have sent me a recruitment email. While I
 appreciate that you're doing your job, I suspect that you've not looked terribly
-hard at whether I want to hear from you.
+hard at whether I *want* to hear from you.
 
 I do not.
 
