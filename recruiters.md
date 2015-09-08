@@ -29,7 +29,7 @@ to switch jobs, I shall start by researching opportunities available then and
 there. To paraphrase the oft-used sentence: don't email me, I'll email you.
 
 Hence, I'm asking you to take the rejection implicit in this reply with good
-grace and, please, to not contact me again.
+grace and I look forward to you not contacting me again.
 
 Thanks,
 
