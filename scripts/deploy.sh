@@ -26,5 +26,9 @@ HMAC=`scripts/calc_hmac.py static.zip`
 echo "HMAC computed as $HMAC"
 
 echo "Pushing payload to $DEPLOY_URL"
-curl -i -F "hmac=$HMAC" -F "archive=@static.zip" "$DEPLOY_URL"
+# NOTE: the --insecure option is here since the Travis build machines don't have
+# the startssl CA in the default list of certificates. It's OK to be insecure
+# here since a) I don't need to trust the identity of the upload server since b)
+# the authentication is that I have valid static content.
+curl --insecure -i -F "hmac=$HMAC" -F "archive=@static.zip" "$DEPLOY_URL"
 
